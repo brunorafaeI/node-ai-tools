@@ -14,6 +14,7 @@ import { getSubscriberInvitesClicksRoute } from './routes/get-subscriber-invites
 import { getSubscriberInvitesCountRoute } from './routes/get-subscriber-invites-count-route'
 import { getSubscriberRankingPositionRoute } from './routes/get-subscriber-ranking-position'
 import { subscribeToEventRoute } from './routes/subscribe-to-event-route'
+import { sendMessageRoute } from './routes/send-message-route'
 
 const app = fastify()
 
@@ -42,6 +43,7 @@ app.register(getRankingRoute)
 app.register(getSubscriberInvitesCountRoute)
 app.register(getSubscriberInvitesClicksRoute)
 app.register(getSubscriberRankingPositionRoute)
+app.register(sendMessageRoute)
 
 app.listen({ port: env.PORT }).then(() => {
   console.log('HTTP server running!')

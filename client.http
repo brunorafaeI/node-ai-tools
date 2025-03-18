@@ -24,3 +24,14 @@ GET http://{{host}}/subscribers/3cc72c15-34b5-4933-b6bf-854ac97dd60d/ranking/pos
 
 ### Get ranking
 GET http://{{host}}/ranking
+
+
+###
+
+### Subscribe to event
+POST http://{{host}}/messages
+Content-Type: application/json
+
+{
+  "message": "Quais são os e-mails dos usuarios cadastrados em minha aplicação?"
+}
